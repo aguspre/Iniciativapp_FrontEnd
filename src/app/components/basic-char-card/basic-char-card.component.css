@@ -1,0 +1,18 @@
+mat-accordion{
+  display: block;
+  padding: 2px;
+  max-width: 200px;
+}
+
+mat-accordion mat-expansion-panel {
+  size: 100%;
+}
+
+img-avatar{
+  width: 100%;
+}
+
+mat-grid-tile{
+  display: block;
+  align-items: left;
+}

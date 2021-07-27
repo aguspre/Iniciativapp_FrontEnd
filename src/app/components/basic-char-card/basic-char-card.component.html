@@ -1,0 +1,23 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{this.Character.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ this.Character.isPlayable ? "PC" : "NPC"}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>    
+          <p><span>Iniciativa = </span>{{this.Character.initiative}}</p><br>
+          <p><span>Clase Armadura = </span>{{this.Character.armorClass}}</p><br>
+          <p><span>HitPoints = </span>{{this.Character.hitPoints}}</p>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <img class="img-avatar" src="{{this.Character.urlAvatarImg}}" alt="{{this.Character.name}} Avatar">
+        </mat-grid-tile>
+      </mat-grid-list>
+  </mat-expansion-panel>
+</mat-accordion>
+

@@ -1,0 +1,50 @@
+h2{
+  color: white;
+}
+
+div{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:  flex-start;
+  align-content: flex-start;
+
+}
+
+charCard{
+  width: 30%;
+  height: 100px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  overflow: hidden;
+  height:1%;
+
+
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.float{
+  display: flex;
+  position: fixed;
+  bottom:10%;
+  text-align: center;
+  font-size: 16px; /* Cambiar el tamaño de la tipografia */
+	text-transform: uppercase; /* Texto en mayusculas */
+	font-weight: bold; /* Fuente en negrita o bold */
+	color: #ffffff; /* Color del texto */
+	letter-spacing: 2px; /* Espacio entre letras */
+  
+  z-index: 99;
+  transition: all 300ms ease 0ms;
+	
+}
+
+@media (max-width: 700px){
+  charCard{
+    width:100%;
+  }
+}

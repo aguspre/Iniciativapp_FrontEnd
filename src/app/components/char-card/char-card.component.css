@@ -1,0 +1,82 @@
+.card {
+  height: auto;
+  display: flex;
+}
+
+.title {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  padding: 10px 24px !important;
+  margin-left: 10px;
+}
+
+.header-image {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  align-items: center;
+  border: 3px solid;
+  border-color: gainsboro;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:left;
+}
+
+.name {
+  margin-left: 10px;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.oculto{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info{
+
+}
+
+.character-img {
+  max-width: 150px;
+  object-fit: scale-down;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.delete{
+  width: 40px;
+  height: 40px;
+  display: contents;
+  align-self: flex-end;
+}
+
+
+
+
+
+
+

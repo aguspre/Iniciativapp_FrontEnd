@@ -1,0 +1,40 @@
+<form [formGroup]="form" (ngSubmit)="saveChar()">
+
+    <h2>{{this.action}} Personaje</h2>
+
+    <mat-form-field appearance="outline" isRequired>
+        <mat-label><mat-icon [class.gree-icon]="this.form.get('titular')?.valid">face</mat-icon> Nombre personaje</mat-label>
+        <input matInput formControlName="characterName" placeholder="Nombre personaje">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" isRequired>
+        <mat-label><mat-icon >accessibility_new</mat-icon> Iniciativa</mat-label>
+        <input matInput maxlength="2" formControlName="characterInit" placeholder="Iniciativa">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label><mat-icon>privacy_tip</mat-icon> Clase Armadura</mat-label>
+        <input matInput maxlength="2" formControlName="characterCa" placeholder="Clase Armardura">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label><mat-icon>favorite</mat-icon> Max HitPoints</mat-label>
+        <input matInput maxlength="3" formControlName="characterHp" placeholder="HP Max">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label><mat-icon>backup</mat-icon> Url avatar</mat-label>
+        <input matInput formControlName="characterUrlAvatar" placeholder="www.sitio.com/miAvatar.jpg">
+        <mat-hint>La url es opcional</mat-hint>
+    </mat-form-field>    
+
+    <mat-form-field appearance="outline">
+        <mat-label><mat-icon>visibility</mat-icon> Tipo de personaje</mat-label>
+            <mat-select formControlName="selectedValue" name="characterType">
+                <mat-option value="pc">Jugador</mat-option>
+                <mat-option value="npc">NPC</mat-option>
+            </mat-select>
+    </mat-form-field>
+ 
+    <button mat-raised-button color="primary" type="submit" [disabled]="this.form.invalid"><mat-icon>perm_identity</mat-icon> {{this.action}} Personaje</button>
+</form> 

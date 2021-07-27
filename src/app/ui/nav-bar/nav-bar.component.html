@@ -1,0 +1,16 @@
+<p>
+    <mat-toolbar class="navbar">
+        <span class="title" routerLink="/">
+          <span class="material-icons">track_changes</span> {{title | uppercase}}
+        </span>
+
+      <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+              <button mat-menu-item routerLink="/character-creation">Crear nuevo personaje</button>
+              <button mat-menu-item routerLink="/combat">Empezar combate</button>
+              <button mat-menu-item routerLink="/characters">Mis personajes</button>
+            </mat-menu>
+    </mat-toolbar>
+  </p>
+
+ 

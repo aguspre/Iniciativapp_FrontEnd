@@ -1,0 +1,39 @@
+
+<mat-accordion  class="card" *ngIf="!rendering" (click)="onSelect(this.Character)">
+  
+  <mat-expansion-panel (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false">
+
+    <mat-expansion-panel-header class="title ">
+      <div mat-card-avatar class="header-image" [ngStyle]="{'background-image': 'url(' + this.Character.urlAvatarImg + ')'}"></div>
+
+      <mat-panel-title class="container" >
+        <span class="name">  {{this.Character.name}}</span>
+        <mat-panel-description class="description">
+          {{this.Character.isPlayable ? "PC" : "NPC"}}
+        </mat-panel-description>
+      </mat-panel-title>
+      
+
+
+    </mat-expansion-panel-header>
+     <div class="oculto">   
+        <div class="info">
+          <p><span>Personaje: </span> {{this.Character.name}}</p>
+          <p><span>Iniciativa: </span>{{this.Character.initiative}}</p>
+          <p><span>CA: </span>{{this.Character.armorClass}}</p>
+          <p><span>HP: </span> {{this.Character.hitPoints}}</p>
+          <img mat-card-md-image class="character-img" src="{{this.Character.urlAvatarImg}}" alt="{{this.Character.urlAvatarImg}}">  
+        </div>
+        <div class="buttons">
+          <button mat-stroked-button color="primary">Up</button>
+          <button mat-stroked-button color="primary">Down</button>
+          <button mat-stroked-button color="warn" (click)="callFormUpdateChar()">Edit</button>
+          <button mat-fab color="warn" class="delete" aria-label="Eliminar personaje" (click)="deleteCharacter()">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+    </div>
+  </mat-expansion-panel>
+
+</mat-accordion>
